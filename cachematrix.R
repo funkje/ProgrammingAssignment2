@@ -16,8 +16,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Returns cached inverse matrix of a matrix if it has been solved
-## otherwise it solves it and stores it in the 'x' object
+## Returns inverse matrix of a matrix. A cached inverse is used if it exists.
+## Otherwise it is solved and stored in the 'x' object.
 cacheSolve <- function(x, ...) {
     i <- x$getInverse()
     if(!is.null(i)){
